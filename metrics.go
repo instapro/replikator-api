@@ -123,7 +123,11 @@ func getMetrics() http.Handler {
 		var data replikatorData
 
 		output := execute("", "--output json --list")
-		json.Unmarshal([]byte(output), &data)
+		err := json.Unmarshal([]byte(output), &data)
+		if err != nil {
+			promhttp.Handler().ServeHTTP(w, r)
+			return
+		}
 
 		labels := prometheus.Labels{
 			"state": strings.ToLower(data.DatabaseGlobalState.ReplicationState),
