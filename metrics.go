@@ -68,6 +68,12 @@ var (
 		Name: "replikator_replica_memory_used",
 		Help: "Memory used by a replica",
 	}, []string{"replica", "state"})
+
+	// Backups metrics
+	replikatorBackupTimestamp = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Name: "replikator_backup_timestamp_seconds",
+		Help: "Backup timestamp in seconds",
+	}, []string{"backup"})
 )
 
 type replikatorData struct {
@@ -91,6 +97,7 @@ type databaseInstanceState struct {
 	DiskUsage          string             `json:"sSizeTotal"`
 	MemoryAllocated    string             `json:"sMemAllocated"`
 	MemoryUsed         string             `json:"sMemUsed"`
+	CreatedAt          string             `json:"dCreationDate"`
 }
 
 type databaseProperties struct {
@@ -115,6 +122,9 @@ func registerMetrics() {
 		replikatorReplicaDiskUsage,
 		replikatorReplicaMemoryAllocated,
 		replikatorReplicaMemoryUsed,
+
+		// Backups metrics
+		replikatorBackupTimestamp,
 	)
 }
 
@@ -122,6 +132,7 @@ func getMetrics() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		var data replikatorData
 
+		// Replicas
 		output := execute("", "--output json --list")
 		json.Unmarshal([]byte(output), &data)
 
@@ -183,6 +194,25 @@ func getMetrics() http.Handler {
 			replikatorReplicaDiskUsage.With(labels).Set(diskUsage)
 			replikatorReplicaMemoryAllocated.With(labels).Set(memoryAllocated)
 			replikatorReplicaMemoryUsed.With(labels).Set(memoryUsed)
+		}
+
+		// Backups
+		output = execute("", "--output json --list-backups")
+		json.Unmarshal([]byte(output), &data)
+
+		replikatorBackupTimestamp.Reset()
+
+		for _, replikator := range data.DatabaseGlobalState.DatabaseInstanceState {
+			labels := prometheus.Labels{
+				"backup": replikator.DatabaseProperties.InstanceId,
+			}
+
+			timestampSeconds, err := strconv.ParseFloat(replikator.CreatedAt, 64)
+			if err != nil {
+				timestampSeconds = 0
+			}
+
+			replikatorBackupTimestamp.With(labels).Set(timestampSeconds)
 		}
 
 		promhttp.Handler().ServeHTTP(w, r)
