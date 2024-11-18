@@ -1,4 +1,4 @@
-module github.com/MarijnKoesen/replikator-api
+module github.com/instapro/replikator-api
 
 go 1.12
 
