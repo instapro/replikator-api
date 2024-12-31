@@ -27,6 +27,10 @@ var (
 		Name: "replikator_replication_lag",
 		Help: "Replication lag from master server",
 	}, []string{"state"})
+	replikatorReplicationLags = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Name: "replikator_replication_lags",
+		Help: "Replication lag per channel",
+	}, []string{"channel"})
 
 	replikatorReplicationDiskUsage = prometheus.NewGaugeVec(prometheus.GaugeOpts{
 		Name: "replikator_replication_disk_usage",
@@ -84,6 +88,7 @@ type databaseGlobalState struct {
 	DatabaseInstanceState []databaseInstanceState `json:"DatabaseInstanceState"`
 	ReplicationState      string                  `json:"eReplicationState"`
 	ReplicationLag        string                  `json:"iReplicationLag"`
+	ReplicationLags       []replicationLag        `json:"iReplicationLags"`
 	ReplicationDiskUsage  string                  `json:"sAllocatedForDb"`
 	DiskCapacity          string                  `json:"sTotalStorageCapacity"`
 	DiskFree              string                  `json:"sFree"`
@@ -100,6 +105,11 @@ type databaseInstanceState struct {
 	CreatedAt          string             `json:"dCreationDate"`
 }
 
+type replicationLag struct {
+	Channel string `json:"sChannel"`
+	Lag     string `json:"iLag"`
+}
+
 type databaseProperties struct {
 	InstanceId string `json:"sInstanceId"`
 }
@@ -112,6 +122,7 @@ func registerMetrics() {
 
 		// Replikator/Replication metrics
 		replikatorReplicationLag,
+		replikatorReplicationLags,
 		replikatorReplicationDiskUsage,
 		replikatorDiskCapacity,
 		replikatorDiskFree,
@@ -147,6 +158,19 @@ func getMetrics() http.Handler {
 		replikatorReplicationLag.Reset()
 		replikatorReplicationLag.With(labels).Set(replicationLag)
 
+		replikatorReplicationLags.Reset()
+		for _, channelLag := range data.DatabaseGlobalState.ReplicationLags {
+			labels := prometheus.Labels{
+				"channel": channelLag.Channel,
+			}
+
+			replicationLag, err := strconv.ParseFloat(channelLag.Lag, 64)
+			if err != nil {
+				replicationLag = -1
+			}
+			replikatorReplicationLags.With(labels).Set(replicationLag)
+
+		}
 		replicationDiskUsage, err := strconv.ParseFloat(data.DatabaseGlobalState.ReplicationDiskUsage, 64)
 		if err != nil {
 			replicationDiskUsage = 0
