@@ -36,7 +36,7 @@ func (m *KeyedMutex) Lock(key string) func() {
 var listenAddress = goopt.String([]string{"-l", "--listen"}, ":8080", "listen address")
 var replikatorPath = goopt.String([]string{"-r", "--replikator"}, "sudo replikator-ctl", "Path to replikator-ctl")
 
-func execute(lockKey string, parameters string) string {
+var execute = func(lockKey string, parameters string) string {
 	args := strings.Fields(*replikatorPath + " " + parameters)
 	cmd := exec.Command(args[0], args[1:]...)
 

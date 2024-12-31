@@ -1,0 +1,160 @@
+{
+  "DatabaseGlobalState": {
+    "sFqdn": "ip-10-199-2-227.eu-west-1.compute.internal",
+    "sIp": "10.199.2.227",
+    "sFs": "zfs",
+    "iReplicationPort": 3307,
+    "eBaseProcessState": "RUNNING",
+    "eReplicationState": "RUNNING",
+    "iReplicationLag": "1",
+    "sTotalMemCapacity": "30765219840",
+    "sAllocatedMemForInstances": "4831838208",
+    "sPercentAllocatedMemForInstances": "15",
+    "sFreeMem": "25933381632",
+    "sPercentFreeMem": "84",
+    "sTotalStorageCapacity": "310042951680",
+    "sAllocatedForDb": "76059918336",
+    "sPercentAllocatedForDb": "24",
+    "sDbDataUsed": "76059918336",
+    "sDbDataLogicalUsed": "130772496896",
+    "sDbDataCompressRatio": "1.72",
+    "sAllocatedForInstances": "28161097728",
+    "sAllocatedForInstancesLogical": "logicalusedspace",
+    "sAllocatedForInstancesCompressRatio": "1.43",
+    "sPercentAllocatedForInstances": "9",
+    "sFree": "163275808768",
+    "sPercentFree": "52",
+    "DatabaseInstanceState": [
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241225-1600",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4011,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735142404",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1308135424"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241226-0400",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4000,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735185605",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1091018752"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241226-1600",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4006,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735228805",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1124753408"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241227-0400",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4005,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735272006",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1199525888"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241227-1600",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4008,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735315206",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1251774464"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241228-0400",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4001,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735358404",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1205821440"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241228-1600",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4009,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735401605",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1227161600"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241229-0400",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4002,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735444806",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1272254464"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241229-1600",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4003,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735488005",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "1133137920"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "backup-20241230-0400",
+          "sOrigin": "origin_lookup_error_zfs_snapshot_not_found",
+          "iPort": 4004,
+          "sIP": "10.199.2.227"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735531206",
+        "sMemUsed": "---",
+        "sMemAllocated": "2415919104",
+        "sSizeTotal": "706424832"
+      }
+    ]
+  }
+}

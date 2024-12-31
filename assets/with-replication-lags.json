@@ -1,0 +1,57 @@
+{
+  "DatabaseGlobalState": {
+    "sFqdn": "ip-10-199-2-235.eu-west-1.compute.internal",
+    "sIp": "10.199.2.235",
+    "sFs": "zfs",
+    "iReplicationPort": 3307,
+    "eBaseProcessState": "RUNNING",
+    "eReplicationState": "RUNNING",
+    "iReplicationLag": "5",
+    "iReplicationLags": [
+      {
+        "sChannel": "worst",
+        "iLag": "5"
+      },
+      {
+        "sChannel": "aurora",
+        "iLag": "0"
+      },
+      {
+        "sChannel": "mysql-rds",
+        "iLag": "5"
+      }
+    ],
+    "sTotalMemCapacity": "30765219840",
+    "sAllocatedMemForInstances": "354418688",
+    "sPercentAllocatedMemForInstances": "1",
+    "sFreeMem": "30410801152",
+    "sPercentFreeMem": "98",
+    "sTotalStorageCapacity": "103515422720",
+    "sAllocatedForDb": "3039383552",
+    "sPercentAllocatedForDb": "2",
+    "sDbDataUsed": "3039383552",
+    "sDbDataLogicalUsed": "6144090112",
+    "sDbDataCompressRatio": "2.02",
+    "sAllocatedForInstances": "3792396288",
+    "sAllocatedForInstancesLogical": "logicalusedspace",
+    "sAllocatedForInstancesCompressRatio": "1.00",
+    "sPercentAllocatedForInstances": "3",
+    "sFree": "96657723392",
+    "sPercentFree": "93",
+    "DatabaseInstanceState": [
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "foo-bar",
+          "sOrigin": "root",
+          "iPort": 4010,
+          "sIP": "10.199.2.235"
+        },
+        "eState": "RUNNING",
+        "dCreationDate": "1735548137",
+        "sMemUsed": "337440768",
+        "sMemAllocated": "354418688",
+        "sSizeTotal": "8192"
+      }
+    ]
+  }
+}

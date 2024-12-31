@@ -22,18 +22,19 @@ Options:
 Usage:
 
 ```bash
-$ go get github.com/MarijnKoesen/replikator-api
-$ go build github.com/MarijnKoesen/replikator-api
+$ go get github.com/instapro/replikator-api
+$ go build github.com/instapro/replikator-api
 $ ./replikator-api
 
-# when you don't have replikator-ctl available
+# when you don't have `replikator-ctl` available you can use `echo`
 $ ./replikator-api -r echo
 ```
 
 From source:
 
 ```bash
-$ git clone git@github.com:MarijnKoesen/replikator-api.git
+$ git clone git@github.com:instapro/replikator-api.git
+$ cd replikator-api
 $ go run . -r echo
 ```
 

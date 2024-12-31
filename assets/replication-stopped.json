@@ -1,0 +1,147 @@
+{
+  "DatabaseGlobalState": {
+    "sFqdn": "ip-10-199-2-132.eu-west-1.compute.internal",
+    "sIp": "10.199.2.132",
+    "sFs": "zfs",
+    "iReplicationPort": 3307,
+    "eBaseProcessState": "RUNNING",
+    "eReplicationState": "STOPPED",
+    "iReplicationLag": "n/a",
+    "sTotalMemCapacity": "30765219840",
+    "sAllocatedMemForInstances": "6979321856",
+    "sPercentAllocatedMemForInstances": "22",
+    "sFreeMem": "23785897984",
+    "sPercentFreeMem": "77",
+    "sTotalStorageCapacity": "207534161920",
+    "sAllocatedForDb": "14679900160",
+    "sPercentAllocatedForDb": "7",
+    "sDbDataUsed": "14679900160",
+    "sDbDataLogicalUsed": "27303843840",
+    "sDbDataCompressRatio": "1.86",
+    "sAllocatedForInstances": "132412055552",
+    "sAllocatedForInstancesLogical": "logicalusedspace",
+    "sAllocatedForInstancesCompressRatio": "1.52",
+    "sPercentAllocatedForInstances": "63",
+    "sFree": "53747654656",
+    "sPercentFree": "25",
+    "DatabaseInstanceState": [
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "anonymized-2024-12-10",
+          "sOrigin": "root",
+          "iPort": 4015,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1733789121",
+        "sMemUsed": "---",
+        "sMemAllocated": "1073741824",
+        "sSizeTotal": "1487499264"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "anonymized-2024-12-11",
+          "sOrigin": "root",
+          "iPort": 4016,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1733875523",
+        "sMemUsed": "---",
+        "sMemAllocated": "1073741824",
+        "sSizeTotal": "1329111040"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "anonymized-2024-12-19",
+          "sOrigin": "root",
+          "iPort": 4017,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1734566731",
+        "sMemUsed": "---",
+        "sMemAllocated": "1610612736",
+        "sSizeTotal": "795955200"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "anonymized-2024-12-30",
+          "sOrigin": "root",
+          "iPort": 4011,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "STOPPED",
+        "dCreationDate": "1735517133",
+        "sMemUsed": "---",
+        "sMemAllocated": "1610612736",
+        "sSizeTotal": "951312384"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "instapro-app-release",
+          "sOrigin": "anonymized-2024-12-11",
+          "iPort": 4012,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "RUNNING",
+        "dCreationDate": "1733922029",
+        "sMemUsed": "1561436160",
+        "sMemAllocated": "1073741824",
+        "sSizeTotal": "135049216"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "instapro-ca-fusion",
+          "sOrigin": "anonymized-2024-12-10",
+          "iPort": 4014,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "RUNNING",
+        "dCreationDate": "1733818000",
+        "sMemUsed": "603037696",
+        "sMemAllocated": "1073741824",
+        "sSizeTotal": "82767872"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "instapro-homestars-testing",
+          "sOrigin": "anonymized-2024-12-19",
+          "iPort": 4022,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "RUNNING",
+        "dCreationDate": "1734704812",
+        "sMemUsed": "1894825984",
+        "sMemAllocated": "1610612736",
+        "sSizeTotal": "146223104"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "instapro-master",
+          "sOrigin": "anonymized-2024-12-30",
+          "iPort": 4010,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "RUNNING",
+        "dCreationDate": "1735520749",
+        "sMemUsed": "2181607424",
+        "sMemAllocated": "1610612736",
+        "sSizeTotal": "154472448"
+      },
+      {
+        "DatabaseProperties": {
+          "sInstanceId": "instapro-values-api",
+          "sOrigin": "anonymized-2024-12-30",
+          "iPort": 4013,
+          "sIP": "10.199.2.132"
+        },
+        "eState": "RUNNING",
+        "dCreationDate": "1735549171",
+        "sMemUsed": "2083225600",
+        "sMemAllocated": "1610612736",
+        "sSizeTotal": "151638016"
+      }
+    ]
+  }
+}
